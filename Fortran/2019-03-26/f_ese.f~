@@ -1,0 +1,7 @@
+      function f_ese(x,n)
+      dimension x(n)
+      f_ese = 0
+      do i=1,n
+          f_ese = f_ese + x(i)*x(i)
+      enddo
+      end

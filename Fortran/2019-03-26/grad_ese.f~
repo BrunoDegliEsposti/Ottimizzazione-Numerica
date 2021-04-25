@@ -1,0 +1,4 @@
+      subroutine grad_ese(x,n,g)
+      dimension x(n), g(n)
+      g = 2*x
+      end

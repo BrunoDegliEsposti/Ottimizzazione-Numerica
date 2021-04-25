@@ -1,0 +1,18 @@
+      program main_gradiente
+      implicit double precision(a-h,o-z)
+      n = 2
+      kmax = 300
+      toll = 1e-3
+      alpha = 0.1
+      dimension x(n), g(n)
+      x(1) = 0.5
+      x(2) = 0.5;
+      external f_ese, grad_ese
+      call gradiente(x,kmax,toll,alpha,f_ese,grad_ese,iflag,fx,k,
+     *  gnorma,g,n)
+      print*, 'Valore del flag: ', iflag
+      print*, 'Valore di k: ', k
+      print*, 'Valore di x: ', x
+      print*, 'Valore di f(x): ', fx
+      print*, 'Valore della norma di gradf(x): ', gnorma
+      end

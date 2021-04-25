@@ -1,0 +1,9 @@
+      FUNCTION RNORMA_2(X,N)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION X(N)
+      RNORMA_2 = 0.D0
+      DO I=1,N
+        RNORMA_2 = RNORMA_2 + X(I)*X(I)
+      ENDDO
+      RNORMA_2 = SQRT(RNORMA_2)
+      END

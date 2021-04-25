@@ -1,0 +1,41 @@
+      subroutine gradiente(x,kmax,toll,alpha,f,gradf,iflag,fx,k,
+     *  gnorma,g,n)
+C         x input, output
+C             in input: approssimazione iniziale
+C             in output: ultima iterata calcolata
+C         f function per valutare f(x)
+C             function f(x,n)
+C             dimension x(n)
+C         gradf subroutine per valutare g=gradf(x)
+C             subroutine gradf(x,n,g)
+C             dimension x(n), g(n)
+      implicit double precision(a-h,o-z)
+      dimension x(n), g(n)
+      call gradf(x,n,g)
+      do k=0,kmax
+          gnorma = DNRM2(n,g,1)
+          if (gnorma .le. toll) then
+              flag = 1
+              fx = f(x,n)
+              return
+          endif
+          x = x - alpha*g
+          call gradf(x,n,g)
+      enddo
+      flag = 0
+      end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
