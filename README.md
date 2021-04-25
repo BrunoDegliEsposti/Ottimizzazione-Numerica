@@ -8,4 +8,7 @@ Docente: Prof. Stefania Bellavia
 Testo di riferimento: "Numerical Optimization" Nocedal, Wright
 
 Argomenti trattati:
-- Ottimizzazione non lineare, non vincolata
+- Ottimizzazione continua non lineare, non vincolata
+- Teoria dell'ottimizzazione vincolata
+- Programmazione lineare (metodo del simplesso, metodi interior-point)
+- Programmazione quadratica
